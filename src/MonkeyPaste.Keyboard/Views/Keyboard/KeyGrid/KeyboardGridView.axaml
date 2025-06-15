@@ -1,0 +1,50 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:MonkeyPaste.Keyboard.Common"
+             xmlns:local="clr-namespace:MonkeyPaste.Keyboard"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             ClipToBounds="False"
+             x:DataType="vm:KeyboardViewModel"
+             x:Class="MonkeyPaste.Keyboard.KeyboardGridView">
+    <Grid>
+
+        <!--  KEYBOARD  -->
+
+        <ItemsControl x:Name="KeyItemsControl"
+                      ClipToBounds="False"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      Width="{Binding KeyboardWidth}"
+                      Height="{Binding KeyGridHeight}"
+                      ItemsSource="{Binding Keys}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate x:DataType="vm:KeyViewModel">
+                    <local:KeyView Classes.down="{Binding IsPressed}"
+                                   Classes.hold-focus-key="{Binding IsActiveKey}"
+                                   Classes.popup-key="{Binding IsPopupKey}"
+                                   Classes.special="{Binding IsSpecial}"
+                                   Classes.primary-special="{Binding IsPrimarySpecial}"
+                                   Classes.shift="{Binding IsShiftKeyAndOnTemp}"
+                                   Classes.shift-lock="{Binding IsShiftKeyAndOnLock}" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+
+        <Canvas x:Name="DebugCanvasOverlay"
+                Grid.Row="1"
+                ClipToBounds="False"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                IsHitTestVisible="False" />
+    </Grid>
+</UserControl>

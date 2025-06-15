@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(CommonTargetFramework)</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <AvaloniaXaml Remove="Assets\Localization\packs\**" />
+    <AvaloniaXaml Remove="Assets\Localization\packs_backup\**" />
+    <AvaloniaXaml Remove="Util\TextCorrector\SymSpell\**" />
+    <Compile Remove="Assets\Localization\packs\**" />
+    <Compile Remove="Assets\Localization\packs_backup\**" />
+    <Compile Remove="Util\TextCorrector\SymSpell\**" />
+    <EmbeddedResource Remove="Assets\Localization\packs\**" />
+    <EmbeddedResource Remove="Assets\Localization\packs_backup\**" />
+    <EmbeddedResource Remove="Util\TextCorrector\SymSpell\**" />
+    <None Remove="Assets\Localization\packs\**" />
+    <None Remove="Assets\Localization\packs_backup\**" />
+    <None Remove="Util\TextCorrector\SymSpell\**" />
+
+    <AvaloniaResource Include="Assets\Images\**" />
+    <AvaloniaResource Include="Assets\Localization\packs\en-US\en-US.zip" />
+  </ItemGroup>
+
+  <!-- CIPHER REFS -->
+  <!--<ItemGroup>
+    <PackageReference Include="sqlite-net-sqlcipher" Version="1.9.172" />
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlcipher" Version="2.1.10" />
+    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.10" />
+    <PackageReference Include="SQLitePCLRaw.core" Version="2.1.10" />
+    <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.10" />
+    <PackageReference Include="SQLitePCLRaw.provider.sqlite3" Version="2.1.10" />
+  </ItemGroup>-->
+
+  <!-- CONDITIONAL CIPHER REFS -->
+  <!--<ItemGroup>
+    <PackageReference Include="SQLitePCLRaw.core" Version="2.1.10" />
+    <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.10" />
+    <PackageReference Include="SQLitePCLRaw.provider.sqlite3" Version="2.1.10" />
+    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.10" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(BuildOs)' == 'IOS'">
+    <PackageReference Include="sqlite-net-pcl" Version="$(SqlitePclVersion)" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(BuildOs)' != 'IOS'">
+    <PackageReference Include="sqlite-net-sqlcipher" Version="1.9.172" />
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlcipher" Version="2.1.10" />
+  </ItemGroup>-->
+  
+  <!-- NON-CIPHER REFS -->
+  <ItemGroup>
+    <PackageReference Include="Avalonia"/>
+    <PackageReference Include="FuzzySharp"/>
+    <PackageReference Include="ResXResourceReader.NetStandard"  />
+    <PackageReference Include="MonkeyPaste.Common.Avalonia"/>
+    <PackageReference Include="sqlite-net-pcl" />
+    <PackageReference Include="SQLitePCLRaw.bundle_green" />
+    <PackageReference Include="SQLitePCLRaw.core"  />
+    <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" />
+    <PackageReference Include="SQLitePCLRaw.provider.sqlite3"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MonkeyBoard.Bridge\MonkeyBoard.Bridge.csproj" />
+  </ItemGroup>
+</Project>

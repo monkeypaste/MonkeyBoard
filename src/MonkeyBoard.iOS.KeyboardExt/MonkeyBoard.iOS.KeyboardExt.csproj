@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup>
+     <TargetFrameworks>$(CommonTargetFramework)-ios</TargetFrameworks>
+     <Nullable>disable</Nullable>
+     <SupportedOSPlatformVersion>$(MinIosVersion)</SupportedOSPlatformVersion>
+     <NoWarn>$(NoWarn);CA1416;</NoWarn>
+     <ApplicationId>com.Monkey.MonkeyPaste.KeyboardExt</ApplicationId>
+     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+     <ApplicationVersion>1</ApplicationVersion>
+     <UseMauiEssentials>true</UseMauiEssentials>
+   </PropertyGroup>
+
+  <PropertyGroup>
+    <IsAppExtension>true</IsAppExtension>
+    <IsWatchExtension>false</IsWatchExtension>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CodesignKey>Apple Development: thomas kefauver (MY7R67BXWM)</CodesignKey>
+    <CodesignProvision>mp kb profile</CodesignProvision>
+    <ProvisioningType>manual</ProvisioningType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AdvancedColorPickerCore" Version="1.0.0.2" />
+    <PackageReference Include="Avalonia.iOS" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Drastic.MonoTouch.Dialog" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Maui.Essentials" Version="$(MauiEssentialsVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="global.json" />
+    <None Remove="Resources\Assets\en-US.zip" />
+    <None Remove="Resources\Assets\img.zip" />
+    <None Remove="Resources\Nunito_Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Update="Resources\Assets\en-US.zip" Link="Resources\en-US.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Update="Resources\Assets\img.zip" Link="Resources\img.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Update="Resources\Nunito_Regular.ttf" Link="Resources\Fonts\Nunito_Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Resources\Fonts\" />
+  </ItemGroup>
+    
+  
+  <ItemGroup>    
+    <ProjectReference Include="..\MonkeyPaste.Keyboard.Common\MonkeyPaste.Keyboard.Common.csproj" />
+  </ItemGroup>
+</Project>

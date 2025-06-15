@@ -1,0 +1,113 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonkeyBoard.Sample", "src\Sample\MonkeyBoard.Sample\MonkeyBoard.Sample.csproj", "{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonkeyBoard.Sample.Desktop", "src\Sample\MonkeyBoard.Sample.Desktop\MonkeyBoard.Sample.Desktop.csproj", "{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonkeyBoard.Sample.Browser", "src\Sample\MonkeyBoard.Sample.Browser\MonkeyBoard.Sample.Browser.csproj", "{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonkeyBoard.Sample.iOS", "src\Sample\MonkeyBoard.Sample.iOS\MonkeyBoard.Sample.iOS.csproj", "{EBD9022F-BC83-4846-9A11-6F7F3772DC64}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonkeyBoard.Sample.Android", "src\Sample\MonkeyBoard.Sample.Android\MonkeyBoard.Sample.Android.csproj", "{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3DA99C4E-89E3-4049-9C22-0A7EC60D83D8}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Packages.props = Directory.Packages.props
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{8E801F37-ABA2-4E68-82DB-5AD103159C65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyPaste.Keyboard", "src\MonkeyPaste.Keyboard\MonkeyPaste.Keyboard.csproj", "{A863609A-E9FD-4842-8216-B2544C4515BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyBoard.Builder", "src\MonkeyPaste.Keyboard.Builder\MonkeyBoard.Builder.csproj", "{217BC653-6192-44E0-8223-2AB4B8C31E50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyBoard.Common", "src\MonkeyBoard.Common\MonkeyBoard.Common.csproj", "{9581BD05-746A-4D7A-A66A-C8F5D5E659E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyBoard.Android", "src\MonkeyBoard.Android\MonkeyBoard.Android.csproj", "{2EC9FD88-EBF1-44FB-8C47-5E860619494F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyBoard.Desktop", "src\MonkeyBoard.Desktop\MonkeyBoard.Desktop.csproj", "{0FBD1481-793A-4F58-9D37-FC2F2CB37D4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyBoard.iOS", "src\MonkeyBoard.iOS\MonkeyBoard.iOS.csproj", "{AE1A7B17-E5AD-4ECB-81EF-90F6268CBEB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyBoard.iOS.KeyboardExt", "src\MonkeyBoard.iOS.KeyboardExt\MonkeyBoard.iOS.KeyboardExt.csproj", "{B1D3AE2D-3C9A-4D34-88A1-686D9CD4B07A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyBoard.Bridge", "src\MonkeyBoard.Bridge\MonkeyBoard.Bridge.csproj", "{366C30C6-0774-4D0C-8085-5805E58033B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A863609A-E9FD-4842-8216-B2544C4515BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A863609A-E9FD-4842-8216-B2544C4515BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A863609A-E9FD-4842-8216-B2544C4515BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A863609A-E9FD-4842-8216-B2544C4515BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{217BC653-6192-44E0-8223-2AB4B8C31E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217BC653-6192-44E0-8223-2AB4B8C31E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217BC653-6192-44E0-8223-2AB4B8C31E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217BC653-6192-44E0-8223-2AB4B8C31E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9581BD05-746A-4D7A-A66A-C8F5D5E659E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9581BD05-746A-4D7A-A66A-C8F5D5E659E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9581BD05-746A-4D7A-A66A-C8F5D5E659E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9581BD05-746A-4D7A-A66A-C8F5D5E659E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EC9FD88-EBF1-44FB-8C47-5E860619494F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EC9FD88-EBF1-44FB-8C47-5E860619494F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EC9FD88-EBF1-44FB-8C47-5E860619494F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EC9FD88-EBF1-44FB-8C47-5E860619494F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FBD1481-793A-4F58-9D37-FC2F2CB37D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBD1481-793A-4F58-9D37-FC2F2CB37D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBD1481-793A-4F58-9D37-FC2F2CB37D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBD1481-793A-4F58-9D37-FC2F2CB37D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE1A7B17-E5AD-4ECB-81EF-90F6268CBEB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1A7B17-E5AD-4ECB-81EF-90F6268CBEB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE1A7B17-E5AD-4ECB-81EF-90F6268CBEB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1A7B17-E5AD-4ECB-81EF-90F6268CBEB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D3AE2D-3C9A-4D34-88A1-686D9CD4B07A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D3AE2D-3C9A-4D34-88A1-686D9CD4B07A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D3AE2D-3C9A-4D34-88A1-686D9CD4B07A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D3AE2D-3C9A-4D34-88A1-686D9CD4B07A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366C30C6-0774-4D0C-8085-5805E58033B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366C30C6-0774-4D0C-8085-5805E58033B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366C30C6-0774-4D0C-8085-5805E58033B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366C30C6-0774-4D0C-8085-5805E58033B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83CB65B8-011F-4ED7-BCD3-A6CFA935EF7E}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568} = {8E801F37-ABA2-4E68-82DB-5AD103159C65}
+		{7AD1DAC8-7FBE-49D5-8614-7321233DB82E} = {8E801F37-ABA2-4E68-82DB-5AD103159C65}
+		{1C1A049E-235C-4CD0-B6FA-D53AC418F4DA} = {8E801F37-ABA2-4E68-82DB-5AD103159C65}
+		{ABC31E74-02FF-46EB-B3B2-4E6AE43B456C} = {8E801F37-ABA2-4E68-82DB-5AD103159C65}
+		{EBD9022F-BC83-4846-9A11-6F7F3772DC64} = {8E801F37-ABA2-4E68-82DB-5AD103159C65}
+	EndGlobalSection
+EndGlobal

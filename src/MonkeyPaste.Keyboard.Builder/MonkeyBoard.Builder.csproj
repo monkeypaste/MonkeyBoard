@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(CommonTargetFramework)</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MonkeyBoard.Common\MonkeyBoard.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MonkeyPaste.Common">
+      <HintPath>..\..\..\..\..\..\..\.nuget\packages\monkeypaste.common\1.0.2.22\lib\netstandard2.0\MonkeyPaste.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

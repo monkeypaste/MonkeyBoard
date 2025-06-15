@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!--<OutputType>Exe</OutputType>-->
+    <TargetFrameworks>$(CommonTargetFramework)-ios</TargetFrameworks>
+    <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
+    <Nullable>disable</Nullable>
+    <NoWarn>$(NoWarn);CA1416;</NoWarn>
+    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CodesignKey>Apple Development: Created via API (79M7T3S5XK)</CodesignKey>
+    <CodesignProvision>VS: com.MonkeyPaste.Keyboard.iOS Development</CodesignProvision>   
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+    <CodesignKey>Apple Development: Created via API (79M7T3S5XK)</CodesignKey>
+    <CodesignProvision>VS: com.MonkeyPaste.Keyboard.iOS Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PublishAot>true</PublishAot>
+    <IsAotCompatible>true</IsAotCompatible>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Remove="MockKeyboardViewController.cs" />
+    <Compile Remove="MockKeyboardViewController.Designer.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Avalonia.iOS" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Drastic.MonoTouch.Dialog" Version="1.0.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>    
+    <ProjectReference Include="..\MonkeyBoard.iOS.KeyboardExt\MonkeyBoard.iOS.KeyboardExt.csproj">
+      <IsAppExtension>true</IsAppExtension>
+      <IsWatchExtension>false</IsWatchExtension>
+    </ProjectReference>
+
+    <ProjectReference Include="..\MonkeyPaste.Keyboard.Common\MonkeyPaste.Keyboard.Common.csproj" />
+    <ProjectReference Include="..\MonkeyPaste.Keyboard\MonkeyPaste.Keyboard.csproj" />
+  </ItemGroup>
+</Project>

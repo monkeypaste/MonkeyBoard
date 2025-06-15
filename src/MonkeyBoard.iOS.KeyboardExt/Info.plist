@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Monkeyboard</string>
+  <key>CFBundleName</key>
+  <string>KeyboardExt</string>
+  <key>CFBundleIdentifier</key>
+  <string>com.Monkey.MonkeyPaste.KeyboardExt</string>
+	<key>CFBundleExecutable</key>
+	<string>MonkeyPaste.Keyboard.iOS.KeyboardExt</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>XPC!</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+  <key>MinimumOSVersion</key>
+  <string>13.0</string>
+  <key>UIAppFonts</key>
+  <array>
+    <string>Fonts/Nunito_Regular.ttf</string>
+  </array>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionAttributes</key>
+		<dict>
+			<key>PrefersRightToLeft</key>
+			<false/>
+			<key>PrimaryLanguage</key>
+			<string>en</string>
+			<key>IsASCIICapable</key>
+			<false/>
+			<key>RequestsOpenAccess</key>
+			<true/>
+		</dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.keyboard-service</string>
+		<key>NSExtensionPrincipalClass</key>
+		<string>iosKeyboardViewController</string>
+	</dict>
+</dict>
+</plist>
