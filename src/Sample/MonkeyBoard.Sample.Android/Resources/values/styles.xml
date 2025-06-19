@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
 
-  <style name="MyTheme">
+  <style name="MyTheme" parent="@style/Theme.AppCompat.Light">
+  </style>
+  
+  <style name="SettingsTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+    <!--<item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>-->
   </style>
 
   <style name="MyTheme.NoActionBar" parent="@style/Theme.AppCompat.DayNight.NoActionBar">

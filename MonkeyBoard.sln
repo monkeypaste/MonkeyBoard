@@ -18,19 +18,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Packages.props = Directory.Packages.props
 		.gitignore = .gitignore
 		Directory.Build.props = Directory.Build.props
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{8E801F37-ABA2-4E68-82DB-5AD103159C65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyPaste.Keyboard", "src\MonkeyPaste.Keyboard\MonkeyPaste.Keyboard.csproj", "{A863609A-E9FD-4842-8216-B2544C4515BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyBoard.Builder", "src\MonkeyPaste.Keyboard.Builder\MonkeyBoard.Builder.csproj", "{217BC653-6192-44E0-8223-2AB4B8C31E50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyBoard.Builder", "src\MonkeyBoard.Builder\MonkeyBoard.Builder.csproj", "{217BC653-6192-44E0-8223-2AB4B8C31E50}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyBoard.Common", "src\MonkeyBoard.Common\MonkeyBoard.Common.csproj", "{9581BD05-746A-4D7A-A66A-C8F5D5E659E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyBoard.Android", "src\MonkeyBoard.Android\MonkeyBoard.Android.csproj", "{2EC9FD88-EBF1-44FB-8C47-5E860619494F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyBoard.Desktop", "src\MonkeyBoard.Desktop\MonkeyBoard.Desktop.csproj", "{0FBD1481-793A-4F58-9D37-FC2F2CB37D4B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyBoard.iOS", "src\MonkeyBoard.iOS\MonkeyBoard.iOS.csproj", "{AE1A7B17-E5AD-4ECB-81EF-90F6268CBEB1}"
 EndProject
@@ -80,10 +79,6 @@ Global
 		{2EC9FD88-EBF1-44FB-8C47-5E860619494F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EC9FD88-EBF1-44FB-8C47-5E860619494F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EC9FD88-EBF1-44FB-8C47-5E860619494F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0FBD1481-793A-4F58-9D37-FC2F2CB37D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0FBD1481-793A-4F58-9D37-FC2F2CB37D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0FBD1481-793A-4F58-9D37-FC2F2CB37D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0FBD1481-793A-4F58-9D37-FC2F2CB37D4B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AE1A7B17-E5AD-4ECB-81EF-90F6268CBEB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AE1A7B17-E5AD-4ECB-81EF-90F6268CBEB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE1A7B17-E5AD-4ECB-81EF-90F6268CBEB1}.Release|Any CPU.ActiveCfg = Release|Any CPU

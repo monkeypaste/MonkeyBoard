@@ -3,6 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using Avalonia.Threading;
+using MonkeyBoard.Common;
 using MonkeyPaste.Common;
 using System;
 using System.Diagnostics;
@@ -27,8 +28,10 @@ namespace MonkeyBoard.Sample {
 
         StringBuilder LogSb { get; set; } = new();
 
-public override void OnFrameworkInitializationCompleted() {
+        public override void OnFrameworkInitializationCompleted() {
             if(OperatingSystem.IsIOS()) {
+                // ios keyboard ext debugging/logging is extremely problematic
+                // this logs everything into sample app also logs into the keyboard itself (if you're lucky)
                 MpConsole.ConsoleLineAdded += (s, e) => {
                     Dispatcher.UIThread.Post(() => {
                         LogSb.AppendLine(e);
@@ -42,12 +45,14 @@ public override void OnFrameworkInitializationCompleted() {
                     });
                 };
             }
+
+            // update MonkeyBoard.Commmon.csproj to change default culture from en-US
+            KbAssetMover.MoveAssets(true);
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop) {
                 desktop.MainWindow = new MainWindow {
                     DataContext = new MainViewModel()
                 };
             } else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform) {
-                
                 singleViewPlatform.MainView = new MainView {
                     DataContext = new MainViewModel()
                 };

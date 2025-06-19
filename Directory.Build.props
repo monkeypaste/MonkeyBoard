@@ -10,7 +10,6 @@
         <MpCommonVersion>1.0.2.22</MpCommonVersion>
         <MpCommonAvVersion>1.0.3.32</MpCommonAvVersion>
         <MpCommonPluginVersion>1.0.3.2</MpCommonPluginVersion>
-        <MpCommonWpfVersion>1.0.0.1</MpCommonWpfVersion>
     </PropertyGroup>
     
     <PropertyGroup>

@@ -118,7 +118,8 @@ namespace MonkeyBoard.Common {
 
         #endregion
 
-        public static string CulturesRootDir => Path.Combine(KbStorageHelpers.LocalStorageDir, "locale");
+        public static string CulturesRootDir => 
+            Path.Combine(KbStorageHelpers.LocalStorageDir, "locale");
 
         public static string CurrentUiCultureDir =>
             Path.Combine(

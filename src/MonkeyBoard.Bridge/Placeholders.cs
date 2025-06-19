@@ -1,6 +1,6 @@
 namespace MonkeyBoard.Bridge {
-    public class Placeholders {
-        
+    public static class MpPlatformKeyboardServices {
+        public static MpIKeyboardPermissionHelper KeyboardPermissionHelper { get; set; }
     }
 
     //public class MpAdHostBridgeBase { }

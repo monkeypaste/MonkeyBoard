@@ -4,7 +4,7 @@
     <TargetFramework>net9.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
-    <ApplicationId>com.CompanyName.MonkeyBoard</ApplicationId>
+    <ApplicationId>com.Monkey.MonkeyBoard</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <AndroidPackageFormat>apk</AndroidPackageFormat>
@@ -12,6 +12,8 @@
 
     <AndroidSdkDirectory>/home/tkefauver/android-sdk</AndroidSdkDirectory>
     <JavaSdkDirectory>/home/tkefauver/jdk</JavaSdkDirectory>
+
+    <RuntimeIdentifiers>android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\MonkeyBoard.Android\MonkeyBoard.Android.csproj" />
     <ProjectReference Include="..\MonkeyBoard.Sample\MonkeyBoard.Sample.csproj" />
   </ItemGroup>
 </Project>

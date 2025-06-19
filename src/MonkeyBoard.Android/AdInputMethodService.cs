@@ -39,7 +39,9 @@ using Stream = System.IO.Stream;
 using TouchEventArgs = MonkeyBoard.Common.TouchEventArgs;
 using View = Android.Views.View;
 namespace MonkeyBoard.Android {
-    [Service(Exported = true,Name = "com.Monkey.AdInputMethodService")]
+    [Service(
+        Exported = true,
+        Name = "com.Monkey.AdInputMethodService")]
     public class AdInputMethodService :
         InputMethodService,
         IKeyboardInputConnection,

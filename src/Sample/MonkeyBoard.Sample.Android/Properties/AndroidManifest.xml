@@ -1,5 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" 
+		  android:installLocation="auto">
+
 	<uses-permission android:name="android.permission.INTERNET" />
-	<application android:label="MonkeyBoard.Sample" android:icon="@drawable/Icon" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.EX" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO"/>>
+	<uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+	<application android:label="MonkeyBoard.Sample"
+				 android:debuggable="true"
+				 android:supportsRtl="true"
+				 android:usesCleartextTraffic="true"
+				 android:allowBackup="true"
+				 android:directBootAware="true"
+				 android:icon="@drawable/Icon">
+
+		<service
+				android:name="com.Monkey.AdInputMethodService"
+				android:hardwareAccelerated="true"
+				android:visibleToInstantApps="true"
+				android:exported="true"
+				android:label="MonkeyBoard"
+				android:permission="android.permission.BIND_INPUT_METHOD">
+			<meta-data
+					android:name="android.view.im"
+					android:resource="@xml/method"/>
+			<intent-filter>
+				<action
+						android:name="android.view.InputMethod"/>
+			</intent-filter>
+		</service>
+	</application>
 </manifest>

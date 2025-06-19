@@ -1,25 +1,18 @@
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Controls.Shapes;
 using Avalonia.Input.TextInput;
 using Avalonia.Interactivity;
 using Avalonia.Layout;
 using Avalonia.Media;
-using Avalonia.Media.Imaging;
-using Avalonia.Platform;
 using Avalonia.Platform.Storage;
 using Avalonia.Threading;
 using Avalonia.VisualTree;
 using MonkeyBoard.Common;
-using MonkeyPaste.Avalonia;
 using MonkeyPaste.Common;
-using MonkeyBoard.Sample;
 using System;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using BridgeServices = MonkeyBoard.Bridge.MpPlatformKeyboardServices;
 
 namespace MonkeyBoard.Sample;
 
@@ -86,7 +79,7 @@ public partial class MainView : UserControl {
 
 
     public void RefreshButtonEnabled(bool wait = true) {
-        if(MpPlatformKeyboardServices.KeyboardPermissionHelper is not { } kph) {
+        if(BridgeServices.KeyboardPermissionHelper is not { } kph) {
             return;
         }
         Dispatcher.UIThread.Post(async () => {
@@ -133,7 +126,7 @@ public partial class MainView : UserControl {
 
         RefreshButtonEnabled(false);
         EnableButton.Click += (s, e) => {
-            if(MpPlatformKeyboardServices.KeyboardPermissionHelper is not { } kph) {
+            if(BridgeServices.KeyboardPermissionHelper is not { } kph) {
                 return;
             }
             kph.ShowKeyboardActivator();
@@ -142,7 +135,7 @@ public partial class MainView : UserControl {
 
 
         ActivateButton.Click += (s, e) => {
-            if(MpPlatformKeyboardServices.KeyboardPermissionHelper is not { } kph) {
+            if(BridgeServices.KeyboardPermissionHelper is not { } kph) {
                 return;
             }
             kph.ShowKeyboardSelector();

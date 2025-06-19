@@ -13,15 +13,12 @@
   <uses-permission android:name="android.permission.RECORD_AUDIO"/>>
   <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 	<application android:label="MonkeyPaste"
-               android:debuggable="true"
                  android:icon="@drawable/Icon"
+               android:debuggable="true"
                android:supportsRtl="true"
                android:usesCleartextTraffic="true"
                android:allowBackup="true"
                android:directBootAware="true">
-		<activity android:name=".MainActivity" 
-              android:configChanges="orientation" 
-              android:label="MonkeyPaste"></activity>
     <service
         android:name="com.Monkey.AdInputMethodService"
         android:hardwareAccelerated="true"

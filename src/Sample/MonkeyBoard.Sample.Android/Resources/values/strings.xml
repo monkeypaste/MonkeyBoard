@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="header_preferences">Preferences</string>
+  <!-- KEYS -->
+    <string name="title_keys_preference">Keys</string>
+    <string name="title_keys_num_row_preference">Number Row</string>
+    <string name="summary_keys_num_row_preference">Always show a number row in the Normal text-layout</string>
+    <string name="title_keys_emoji_preference">Show emoji jet</string>
+    <string name="summary_keys_emoji_preference">Always show a dedicated emoji key</string>
+  
+  <!-- KEY PRESS -->
+  <string name="title_key_press_preference">Key press</string>
+  <!-- SOUND -->
+  <string name="title_key_press_do_sound_preference">Sound on keypress</string>
+  <string name="title_key_press_volume_preference">Volume on keypress</string>
+  <!-- VIBRATE -->
+   <string name="title_key_press_do_vibrate_preference">Vibrate on keypress</string>
+  <string name="title_key_press_vibrate_level_preference">Vibration level</string>
+
+  <!-- POPUP -->
+  <string name="title_key_press_do_popup_preference">Popup on keypress</string>
+  <!-- LONG-PRESS POPUP -->
+  <string name="title_key_press_do_long_press_popup_preference">Long press for symbols</string>
+
+  <string name="title_key_press_long_press_delay_preference">Long press delay</string>
+
+
+  <!-- LOOK & FEEL -->
+  <string name="title_look_and_feel_preference">Look and Feel</string>
+
+  <!-- NIGHT MODE -->
+  <string name="title_look_and_feel_force_night_mode_preference">Night Mode</string>
+  
+  <!-- BORDERS -->
+  <string name="title_look_and_feel_show_key_borders_preference">Show key borders</string>
+  
+  <!-- BG OPACITY -->
+  <string name="title_look_and_feel_bg_opacity_level_preference">Background opacity</string>
+  <!-- FG OPACITY -->
+  <string name="title_look_and_feel_fg_opacity_level_preference">Foreground opacity</string>
+
+  <!-- BEHAVIOR -->
+  <string name="title_behavior_preference">Behavior</string>
+  <string name="title_behavior_show_suggestions_preference">Show suggestions</string>
+  <string name="title_behavior_do_next_word_completion_preference">Show next word completions</string>
+  <string name="title_behavior_max_completion_count_preference">Max available completions</string>
+  <string name="title_behavior_do_auto_correct_preference">Auto Correct</string>
+  <string name="title_behavior_do_backspace_undo_auto_correct_preference">Undo auto correct on backspace</string>
+  <string name="title_behavior_do_auto_capitalization_preference">Auto Capitalization</string>
+  <string name="title_behavior_do_double_space_period_preference">Double tap space for period</string>
+  <string name="title_behavior_do_cursor_control_preference">Hold space for cursor control</string>
+  <string name="title_behavior_cursor_control_factor_x_preference">Horizontal cursor control sensitivity</string>
+  <string name="title_behavior_cursor_control_factor_y_preference">Vertical cursor control sensitivity</string>
+</resources>

@@ -18,12 +18,6 @@
     <!--<UseMauiEssentials>true</UseMauiEssentials>-->
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Views\Android\Keyboard\Emoji\Search\EmojiCompletionsView.cs" />
-    <Compile Remove="Util\HostBridge\MpAdKbClipboardListener.cs" />
-    <Compile Remove="Util\HostBridge\MpAdKbProcessWatcher.cs" />
-  </ItemGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU' And '$(IsBionic)' == 'False'">
     <RunAOTCompilation>true</RunAOTCompilation>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
@@ -37,6 +31,12 @@
     <AndroidEnableMultiDex>True</AndroidEnableMultiDex>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Views\Android\Keyboard\Emoji\Search\EmojiCompletionsView.cs" />
+    <Compile Remove="Util\HostBridge\MpAdKbClipboardListener.cs" />
+    <Compile Remove="Util\HostBridge\MpAdKbProcessWatcher.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Avalonia.Android" />
@@ -65,7 +65,7 @@
 
 
   <Target Name="FixAar" BeforeTargets="_CreatePropertiesCache">
-    <Exec Command="$(ProjectDir)scripts\fix_obj.sh $(OutDir)"/>
+    <Exec Command="$(ProjectDir)scripts\fix_obj.sh $(OutDir) $(ProjectName)"/>
   </Target>
 
 

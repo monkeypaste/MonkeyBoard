@@ -2,6 +2,8 @@
 using Android.Content.PM;
 using Avalonia;
 using Avalonia.Android;
+using MonkeyBoard.Android;
+using MonkeyBoard.Bridge;
 
 namespace MonkeyBoard.Sample.Android;
 
@@ -11,11 +13,12 @@ namespace MonkeyBoard.Sample.Android;
     Icon = "@drawable/icon",
     MainLauncher = true,
     ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.UiMode)]
-public class MainActivity : AvaloniaMainActivity<App>
-{
-    protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
-    {
+public class MainActivity : AvaloniaMainActivity<App> {
+    protected override AppBuilder CustomizeAppBuilder(AppBuilder builder) {
         return base.CustomizeAppBuilder(builder)
-            .WithInterFont();
+            .WithInterFont()
+            .AfterSetup(_ => {
+                MpPlatformKeyboardServices.KeyboardPermissionHelper = new AdPermissionHelper(this);
+            });
     }
 }

@@ -2,8 +2,8 @@
 using Android.Provider;
 using Android.Views;
 using Android.Views.InputMethods;
+using MonkeyBoard.Bridge;
 using MonkeyPaste.Avalonia;
-using MonkeyPaste.Common;
 using System;
 using System.Linq;
 //using Xamarin.Essentials;
