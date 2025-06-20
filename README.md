@@ -3,7 +3,7 @@
 <p style="text-align: center;"><img style="width: 25%" src="ss/ss1.jpg" />    <img style="width: 25%" src="ss/ss2.jpg" />        <img style="width: 25%" src="ss/ss5.jpg" /><img style="width: 25%" src="ss/ss3.jpg" />    <img style="width: 25%" src="ss/ss4.jpg" /></p>
 
 
-Free, all open-source softkeyboard compatible with **both** Android and iOS.
+Softkeyboard compatible with **both** Android and iOS.
 
 Currently supports (with varying degrees of functionality) **53 different cultures** all with unique sets of keyboards and language dictionaries.
 
