@@ -2,35 +2,12 @@
   <PropertyGroup>
     <TargetFramework>$(CommonTargetFramework)-android</TargetFramework>
     <Nullable>disable</Nullable>
-
     <AndroidSdkDirectory>/home/tkefauver/android-sdk</AndroidSdkDirectory>
     <JavaSdkDirectory>/home/tkefauver/jdk</JavaSdkDirectory>
     
   </PropertyGroup>
 
-  <PropertyGroup Condition="$(BuildOs) == 'ANDROID' and $(IsStandaloneKb) == 'true'">
-    <OutputType>Exe</OutputType>
-    <SupportedOSPlatformVersion>$(MinAdVersion)</SupportedOSPlatformVersion>
-    <ApplicationId>com.CompanyName.iosKeyboardTest</ApplicationId>
-    <ApplicationVersion>1</ApplicationVersion>
-    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-    <AndroidPackageFormat>apk</AndroidPackageFormat>
-    <!--<UseMauiEssentials>true</UseMauiEssentials>-->
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU' And '$(IsBionic)' == 'False'">
-    <RunAOTCompilation>true</RunAOTCompilation>
-    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
-    <EnableLLVM>true</EnableLLVM>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <AndroidPackageFormat>apk</AndroidPackageFormat>
-    <Debugger>Xamarin</Debugger>
-    <DebugSymbols>True</DebugSymbols>
-    <AndroidEnableMultiDex>True</AndroidEnableMultiDex>
-    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
-  </PropertyGroup>
+  
   <ItemGroup>
     <Compile Remove="Views\Android\Keyboard\Emoji\Search\EmojiCompletionsView.cs" />
     <Compile Remove="Util\HostBridge\MpAdKbClipboardListener.cs" />
@@ -40,8 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="Avalonia.Android" />
-    <!--<PackageReference Include="Microsoft.Maui.Essentials" Version="$(MauiEssentialsVersion)" />-->
-    <PackageReference Include="Net.ArcanaStudio.ColorPickerCore" />
+    <PackageReference Include="ColorPickerCore" />
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common" />
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" />
     <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx" />
@@ -50,23 +26,16 @@
     <PackageReference Include="Xamarin.AndroidX.Work.Runtime" />
     <PackageReference Include="Xamarin.Essentials" />
   </ItemGroup>
-  
-
-  <!--<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <AndroidEnableMultiDex>True</AndroidEnableMultiDex>
-    <AndroidLinkTool>r8</AndroidLinkTool>
-  </PropertyGroup>-->
 
   <ItemGroup>
     <ProjectReference Include="..\MonkeyBoard.Bridge\MonkeyBoard.Bridge.csproj" />
     <ProjectReference Include="..\MonkeyBoard.Common\MonkeyBoard.Common.csproj" />
-    <ProjectReference Include="..\MonkeyBoard.Bridge\MonkeyBoard.Bridge.csproj" />
   </ItemGroup>
 
 
-  <Target Name="FixAar" BeforeTargets="_CreatePropertiesCache">
-    <Exec Command="$(ProjectDir)scripts\fix_obj.sh $(OutDir) $(ProjectName)"/>
-  </Target>
+<!--  <Target Name="FixAar" BeforeTargets="_CreatePropertiesCache" >-->
+<!--    <Exec Command="$(ProjectDir)scripts\fix_obj.sh $(OutDir) $(ProjectName)"/>-->
+<!--  </Target>-->
 
 
 </Project>

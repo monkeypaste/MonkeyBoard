@@ -61,11 +61,12 @@ namespace MonkeyBoard.Common {
         }
 
         static bool MoveCulture(bool force, string cc) {
+            // NOTE culture pack is zip of culture folder CONTENT not zip of culture folder itself
             try {
-                string neutral_cul_dir = Path.Combine(CultureManager.CulturesRootDir, cc);
-                if(neutral_cul_dir.IsDirectory()) {
+                string cul_dir = Path.Combine(CultureManager.CulturesRootDir, cc);
+                if(cul_dir.IsDirectory()) {
                     if(force) {
-                        MpFileIo.DeleteDirectory(neutral_cul_dir);
+                        MpFileIo.DeleteDirectory(cul_dir);
                     } else {
                         // already exists
                         return false;
@@ -76,7 +77,7 @@ namespace MonkeyBoard.Common {
                 if(!MoveAsset(ca_source_uri, temp_zip_path)) {
                     return false;
                 }
-                ZipFile.ExtractToDirectory(temp_zip_path, neutral_cul_dir);
+                ZipFile.ExtractToDirectory(temp_zip_path, cul_dir);
                 MpFileIo.DeleteFile(temp_zip_path);
                 return true;
             }

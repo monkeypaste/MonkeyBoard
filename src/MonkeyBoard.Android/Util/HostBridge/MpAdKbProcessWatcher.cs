@@ -3,7 +3,7 @@ using MonkeyPaste.Common;
 using System;
 using System.Collections.Generic;
 
-namespace MonkeyPaste.Keyboard.Android {
+namespace MonkeyBoard.Android {
     public class MpAdKbProcessWatcher : MpIProcessWatcher {
         #region Private Variables
         #endregion

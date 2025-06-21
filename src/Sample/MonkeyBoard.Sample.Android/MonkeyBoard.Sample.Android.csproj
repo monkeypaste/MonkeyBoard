@@ -3,7 +3,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net9.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ApplicationId>com.Monkey.MonkeyBoard</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -13,7 +13,18 @@
     <AndroidSdkDirectory>/home/tkefauver/android-sdk</AndroidSdkDirectory>
     <JavaSdkDirectory>/home/tkefauver/jdk</JavaSdkDirectory>
 
-    <RuntimeIdentifiers>android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>
+<!--    <RuntimeIdentifiers>android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>-->
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <RunAOTCompilation>true</RunAOTCompilation>
+    <EnableLLVM>true</EnableLLVM>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Debugger>Xamarin</Debugger>
+    <DebugSymbols>True</DebugSymbols>
+    <AndroidEnableMultiDex>True</AndroidEnableMultiDex>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,7 +39,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\MonkeyBoard.Android\MonkeyBoard.Android.csproj" />
     <ProjectReference Include="..\MonkeyBoard.Sample\MonkeyBoard.Sample.csproj" />
+    <ProjectReference Include="..\..\MonkeyBoard.Android\MonkeyBoard.Android.csproj" />
+    <PackageReference Include="System.Formats.Nrbf"/>
   </ItemGroup>
+
+<!--  <Target Name="FixAar" BeforeTargets="_CreatePropertiesCache" >-->
+<!--    <Exec Command="$(ProjectDir)\..\..\MonkeyBoard.Android\scripts\fix_obj.sh $(OutDir) MonkeyBoard.Android"/>-->
+<!--  </Target>-->
 </Project>

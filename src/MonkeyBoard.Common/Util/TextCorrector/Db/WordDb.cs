@@ -1,5 +1,4 @@
-﻿using FuzzySharp;
-using MonkeyPaste.Common;
+﻿using MonkeyPaste.Common;
 using SQLite;
 using SQLitePCL;
 using System;
@@ -108,15 +107,8 @@ namespace MonkeyBoard.Common {
                 return;
             }
 
-
-            if(CultureManager.CurrentKbCulture.StartsWith("en")) {
-                //raw.sqlite3_create_function(AsyncConn.GetConnection().Handle, "EDIT_DIST", 2, null, FuzzRatio);
-                raw.sqlite3_create_function(AsyncConn.GetConnection().Handle, "EDIT_DIST", 2, null, EditDistanceSqlFunc);
-            } else {
-                //NOTE fuzz is only made for english so fallback to dist otherwise
-                //from https://github.com/JakeBayer/FuzzySharp#fuzzysharp-in-different-languages
-                raw.sqlite3_create_function(AsyncConn.GetConnection().Handle, "EDIT_DIST", 2, null, EditDistanceSqlFunc);
-            }
+            raw.sqlite3_create_function(AsyncConn.GetConnection().Handle, "EDIT_DIST", 2, null, EditDistanceSqlFunc);
+            
             await AsyncConn.CreateTableAsync<Word>();
 
             InitCount = await GetTotalWordCountAsync();
@@ -578,12 +570,6 @@ LIMIT ?";
         static async Task<int> GetMinRankForWordCountAsync(int wordCount) {
             var result = await AsyncConn.ExecuteScalarAsync<int>($"SELECT Rank FROM Word WHERE Omitted=0 ORDER BY Rank DESC limit 1 offset ?", wordCount);
             return result;
-        }
-        public static void FuzzRatioSqlFunc(sqlite3_context ctx, object user_data, sqlite3_value[] args) {
-            string a = raw.sqlite3_value_text(args[0]).utf8_to_string();
-            string b = raw.sqlite3_value_text(args[1]).utf8_to_string();
-            int ratio = Fuzz.Ratio(a, b);
-            raw.sqlite3_result_int(ctx, 100 - ratio);
         }
         static void EditDistanceSqlFunc(sqlite3_context ctx, object user_data, sqlite3_value[] args) {
             // NOTE a is always from db b is mv

@@ -28,7 +28,7 @@ Currently supports (with varying degrees of functionality) **53 different cultur
 
 
 ## Special Thanks
-[AnySoftKeyboard](https://github.com/anysoftkeyboard) for providing a nice collection of keyboards (and word corpus' too!)
+[AnySoftKeyboard](https://github.com/anysoftkeyboard)
 
 
 

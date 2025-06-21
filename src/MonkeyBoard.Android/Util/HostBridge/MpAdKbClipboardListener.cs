@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using static Android.Content.ClipboardManager;
 using ClipboardManager = Android.Content.ClipboardManager;
 
-namespace MonkeyPaste.Keyboard.Android {
+namespace MonkeyBoard.Android {
     public class MpAdKbClipboardListener : MpAvClipboardWatcher {
         #region Private Variables
         private Context _context;

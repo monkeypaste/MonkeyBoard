@@ -21,7 +21,11 @@
     <None Remove="Util\TextCorrector\SymSpell\**" />
 
     <AvaloniaResource Include="Assets\Images\**" />
-    <AvaloniaResource Include="Assets\Localization\packs\en-US\en-US.zip" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <!-- only include invariant keyboard pack... -->
+    <AvaloniaResource Include="Assets\Localization\packs\en-US\en-US.zip" />    
   </ItemGroup>
 
   <!-- CIPHER REFS -->
@@ -51,9 +55,11 @@
   </ItemGroup>-->
   
   <!-- NON-CIPHER REFS -->
+  <ItemGroup Condition="'$(BuildOs)' != 'IOS'">
+    <PackageReference Include="sqlite-net-sqlcipher"/>
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlcipher" />
+  </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia"/>
-    <PackageReference Include="FuzzySharp"/>
     <PackageReference Include="ResXResourceReader.NetStandard"  />
     <PackageReference Include="MonkeyPaste.Common.Avalonia"/>
     <PackageReference Include="sqlite-net-pcl" />

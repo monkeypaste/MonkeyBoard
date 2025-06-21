@@ -454,3 +454,4 @@ $RECYCLE.BIN/
 !.vscode/extensions.json
 
 /src/MonkeyBoard.Common/Assets/Localization/packs/
+/src/MonkeyBoard.iOS.KeyboardExt/Resources/
