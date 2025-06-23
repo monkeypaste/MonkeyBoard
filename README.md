@@ -20,8 +20,8 @@ Currently supports (with varying degrees of functionality) **53 different cultur
 ## Building from source
 1. Language packs are NOT included in this repo but all are available on my website [here](https://www.monkeypaste.com/dat/kb/kb-index.json). 
 2. You'll need to move them to this relative path
-`MonkeyBoard.Common/Assets/Localization/packs/<culture-code>/<culture-code>.zip`
-3. (if not using en-US) Update `MonkeyBoard.Common/MonkeyBoard.Common.csproj` with the path from Step #2
+`src/MonkeyBoard.Common/Assets/Localization/packs/<culture-code>/<culture-code>.zip`
+3. (if not using en-US) Update `src/MonkeyBoard.Common/MonkeyBoard.Common.csproj` with the path from Step #2
 
 ## Special Thanks
 [AnySoftKeyboard](https://github.com/anysoftkeyboard)
