@@ -13,7 +13,7 @@
     <AndroidSdkDirectory>/home/tkefauver/android-sdk</AndroidSdkDirectory>
     <JavaSdkDirectory>/home/tkefauver/jdk</JavaSdkDirectory>
 
-<!--    <RuntimeIdentifiers>android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>-->
+    <RuntimeIdentifiers>android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

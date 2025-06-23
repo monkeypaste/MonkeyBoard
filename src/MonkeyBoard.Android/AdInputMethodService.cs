@@ -893,15 +893,23 @@ namespace MonkeyBoard.Android {
         }
         bool? _isTablet;
         bool IsTablet() {
-            if(_isTablet is not { } isTablet) {
-                if(PrefManager is { } pm) {
-                    isTablet = pm.GetPrefValue<bool>(PrefKeys.IS_TABLET);
-                    _isTablet = isTablet;
-                } else {
-                    isTablet = false;
-                }
+            //return (ctx.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE; 
+            if(Resources is { } res &&
+               res.Configuration is { } config &&
+               ((int)config.ScreenLayout & (int)ScreenLayout.SizeMask) >= (int)ScreenLayout.SizeLarge) {
+                return true;
             }
-            return isTablet;
+            return false;
+
+            // if(_isTablet is not { } isTablet) {
+            //     if(PrefManager is { } pm) {
+            //         isTablet = pm.GetPrefValue<bool>(PrefKeys.IS_TABLET);
+            //         _isTablet = isTablet;
+            //     } else {
+            //         isTablet = false;
+            //     }
+            // }
+            // return isTablet;
         }
         void Init() {
             if(PrefManager == null) {
